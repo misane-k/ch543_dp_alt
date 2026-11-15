@@ -1,0 +1,9 @@
+**
+!.gitignore
+!build.ps1
+!main.uvproj
+!STARTUP.A51
+!*.c
+!*.C
+!*.h
+!*.H
