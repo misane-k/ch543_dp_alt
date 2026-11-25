@@ -88,23 +88,6 @@
 #define RX2_LND CH9445F_SEL_D0
 
 
-// SRC:  RX1_RX, TX1_TX, RX2_LN0, TX2_LN1
-// FLIP: RX2_RX, TX2_TX, RX1_LN0, TX1_LN1
-// 注意：LNA/LNB需要放到CTRL1寄存器，LNC/LND需要放到CTRL2寄存器
-
-#define CH9445F_CTRL1_SOURCE_DP2       ( SS_RX1 | RX2_LNA | TX2_LNB )
-#define CH9445F_CTRL2_SOURCE_DP2       ( SS_TX1 )
-
-#define CH9445F_CTRL1_SOURCE_DP2_FLIP  ( SS_RX2 | RX1_LNA | TX1_LNB )
-#define CH9445F_CTRL2_SOURCE_DP2_FLIP  ( SS_TX2 )
-
-#define CH9445F_CTRL1_SINK_DP2         ( SS_RX1 )
-#define CH9445F_CTRL2_SINK_DP2         ( SS_TX1 | TX2_LNC | RX2_LND )
-
-#define CH9445F_CTRL1_SINK_DP2_FLIP    ( SS_RX2 )
-#define CH9445F_CTRL2_SINK_DP2_FLIP    ( SS_TX2 | TX1_LNC | RX1_LND )
-
-
 extern void CH9445F_Init( void );
 extern void CH9445F_RequestMode(UINT8 req_mode, UINT8 req_flip);
 extern void CH9445F_Apply();
